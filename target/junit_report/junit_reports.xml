@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="5" time="235.974">
+<testcase classname="Login Page Feature" name="Validate login page" time="18.336">
+<system-out><![CDATA[Given User is on login page.................................................passed
+Then Login page title is displayed as "Wishup App"..........................passed
+And Login page URL is displayed as "https://app-dev.wishup.co/login"........passed
+And Wishup logo is displayed................................................passed
+And Login option on corner is displayed.....................................passed
+And Signup option on corner is displayed....................................passed
+And Login screen is displayed...............................................passed
+And Sign in with Google option is displayed.................................passed
+And Email address field is displayed........................................passed
+And Password field is displayed.............................................passed
+And Login button is displayed...............................................passed
+And Forget your password? is displayed......................................passed
+And Click here to signup option is displayed................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Page Feature" name="Login Pass" time="92.877">
+<failure message="Expected condition failed: waiting for url to contain &quot;request=true&quot;. Current url: &quot;https://app-dev.wishup.co/login?redirect=/&quot; (tried for 20 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.2.2', revision: '683ccb65d6'&#10;System info: host: 'LAPTOP-FDDH7219', ip: '192.168.95.107', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.81, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\91901\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63550}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63550/devtoo..., se:cdpVersion: 104.0.5112.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: b624ea9da4b3c527bb10a35dd754bed5" type="org.openqa.selenium.TimeoutException"><![CDATA[Given User is on login page.................................................passed
+When User enters "wishup_testuser1@gmail.com" in Email address field........passed
+And User enters "testpw1" in password field.................................passed
+And Clicks on login button..................................................failed
+Then Home page title is displayed as "Wishup App"...........................skipped
+And Home page URL is displayed as "request=true"............................skipped
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "request=true". Current url: "https://app-dev.wishup.co/login?redirect=/" (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.2.2', revision: '683ccb65d6'
+System info: host: 'LAPTOP-FDDH7219', ip: '192.168.95.107', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.81, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\91901\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63550}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63550/devtoo..., se:cdpVersion: 104.0.5112.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b624ea9da4b3c527bb10a35dd754bed5
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.utilities.BaseUtility.waitForUrlContains(BaseUtility.java:38)
+	at org.POM_Pages.WishupPageLogin.enterLoginBtn(WishupPageLogin.java:116)
+	at org.stepdefinations.WishupLoginStepDef.clicks_on_login_button(WishupLoginStepDef.java:78)
+	at ✽.Clicks on login button(file:///H:/Acceleration/Workspace/Wishup_Cucumber_Project/src/test/resources/org/features/WishupLoginPage.feature:23)
+]]></failure>
+</testcase>
+<testcase classname="Login Page Feature" name="Login Pass 2" time="28.402">
+<system-out><![CDATA[Given User is on login page.................................................passed
+When User enters "wishup_testuser3@gmail.com" in Email address field........passed
+And User enters "testpw3" in password field.................................passed
+And Clicks on login button..................................................passed
+Then Home page title is displayed as "Wishup App"...........................passed
+And Home page URL is displayed as "request=true"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Page Feature" name="Login Pass 3" time="31.456">
+<system-out><![CDATA[Given User is on login page.................................................passed
+When User enters "wishup_testuser4@gmail.com" in Email address field........passed
+And User enters "testpw4" in password field.................................passed
+And Clicks on login button..................................................passed
+Then Home page title is displayed as "Wishup App"...........................passed
+And Home page URL is displayed as "request=true"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Page Feature" name="Login Fail" time="64.101">
+<failure message="Expected condition failed: waiting for url to contain &quot;request=true&quot;. Current url: &quot;https://app-dev.wishup.co/login?redirect=/&quot; (tried for 20 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.2.2', revision: '683ccb65d6'&#10;System info: host: 'LAPTOP-FDDH7219', ip: '192.168.95.107', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.81, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\91901\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63899}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63899/devtoo..., se:cdpVersion: 104.0.5112.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 691629f5780f56bcca37bcd66334fdbb" type="org.openqa.selenium.TimeoutException"><![CDATA[Given User is on login page.................................................passed
+When User enters "wishup_testuser2@gmail.com" in Email address field........passed
+And User enters "testpw2" in password field.................................passed
+And Clicks on login button..................................................failed
+Then Home page title is displayed as "Wishup App"...........................skipped
+And Home page URL is displayed as "request=true"............................skipped
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "request=true". Current url: "https://app-dev.wishup.co/login?redirect=/" (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.2.2', revision: '683ccb65d6'
+System info: host: 'LAPTOP-FDDH7219', ip: '192.168.95.107', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.81, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\91901\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63899}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63899/devtoo..., se:cdpVersion: 104.0.5112.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 691629f5780f56bcca37bcd66334fdbb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.utilities.BaseUtility.waitForUrlContains(BaseUtility.java:38)
+	at org.POM_Pages.WishupPageLogin.enterLoginBtn(WishupPageLogin.java:116)
+	at org.stepdefinations.WishupLoginStepDef.clicks_on_login_button(WishupLoginStepDef.java:78)
+	at ✽.Clicks on login button(file:///H:/Acceleration/Workspace/Wishup_Cucumber_Project/src/test/resources/org/features/WishupLoginPage.feature:37)
+]]></failure>
+</testcase>
+</testsuite>
